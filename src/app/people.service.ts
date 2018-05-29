@@ -19,9 +19,7 @@ export class PeopleService {
   /** GET people from the server */
   getCustomers(): Observable<People[]> {
     return this.http.get(PeopleService.url)
-        .map(data => {
-          return data['results'];
-        });
+      .map((res: any) => res.results);
   }
   // Manejo de error
   private handleError(error: any): Promise<any> {
