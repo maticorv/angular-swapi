@@ -10,6 +10,7 @@ import { SpaceshipsComponent } from './spaceships/spaceships.component';
 import { SpeciesComponent } from './species/species.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     DashboardComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
