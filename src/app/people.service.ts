@@ -17,7 +17,7 @@ export class PeopleService {
   constructor( private http: HttpClient) { }
 
   /** GET people from the server */
-  getCustomers(): Observable<People[]> {
+  getPeople(): Observable<People[]> {
     return this.http.get(PeopleService.url)
       .map((res: any) => res.results);
   }

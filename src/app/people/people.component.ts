@@ -13,7 +13,7 @@ export class PeopleComponent implements OnInit {
 
   ngOnInit() {
     this.peopleService
-    .getCustomers()
+    .getPeople()
     .subscribe(data => this.people = data);
   }
 
