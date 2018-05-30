@@ -14,8 +14,10 @@ export class PeopleComponent implements OnInit {
   ngOnInit() {
     this.peopleService
     .getPeople()
-    .subscribe(data => this.people = data);
-    console.log(this.people[0].name);
+    .subscribe(data => {
+      this.people = data;
+      console.log(data);
+    });
   }
 
 }

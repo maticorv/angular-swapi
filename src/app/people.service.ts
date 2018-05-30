@@ -21,7 +21,7 @@ export class PeopleService {
   getPeople(): Observable<IPeople[]> {
     return this.http.get(this.url)
                 .map(data => {
-                  return data['results'];
+                  return data['results'] as IPeople[];
                 });
 }
 }
