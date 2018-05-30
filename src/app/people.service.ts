@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -12,24 +13,20 @@ const httpOptions = {
 @Injectable()
 export class PeopleService {
 
-  private static url = 'https://swapi.co/api/people/';
+  url = 'https://swapi.co/api/people/';
 
   constructor( private http: HttpClient) { }
 
   /** GET people from the server */
-  getPeople(): Observable<People[]> {
-    return this.http.get(PeopleService.url)
-      .map((res: any) => res.results);
-  }
-  // Manejo de error
-  private handleError(error: any): Promise<any> {
-    console.error('An error occurred', error); // for demo purposes only
-    return Promise.reject(error.message || error);
-  }
-
+  getPeople(): Observable<IPeople[]> {
+    return this.http.get(this.url)
+                .map(data => {
+                  return data['results'];
+                });
+}
 }
 // Was generated using the JSON to TS extension for JS
-export interface People {
+export interface IPeople {
   name: string;
   height: string;
   mass: string;

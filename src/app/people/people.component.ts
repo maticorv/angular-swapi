@@ -15,6 +15,7 @@ export class PeopleComponent implements OnInit {
     this.peopleService
     .getPeople()
     .subscribe(data => this.people = data);
+    console.log(this.people[0].name);
   }
 
 }
