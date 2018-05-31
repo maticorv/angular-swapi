@@ -13,17 +13,25 @@ const httpOptions = {
 @Injectable()
 export class PeopleService {
 
-  url = 'https://swapi.co/api/people/';
+  peopleUrl = 'https://swapi.co/api/people/';
 
   constructor( private http: HttpClient) { }
 
   /** GET people from the server */
   getPeople(): Observable<IPeople[]> {
-    return this.http.get(this.url)
+    return this.http.get(this.peopleUrl)
                 .map(data => {
                   return data['results'] as IPeople[];
                 });
-}
+  }
+  // GET person with the id reference
+  getPerson(id: number): Observable<IPeople[]> {
+    const url = `${this.peopleUrl}/?id=${id}`;
+    return this.http.get(url)
+                .map(data => {
+                  return data['results'] as IPeople[];
+                });
+  }
 }
 // Was generated using the JSON to TS extension for JS
 export interface IPeople {
