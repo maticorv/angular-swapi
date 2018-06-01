@@ -1,33 +1,9 @@
-img.logo {
-    height: 90px;
-    position: absolute;
-    margin: auto;
-    display: block;
-    top: 80px;
-    left: 0;
-    right: 0;
-}
-
-header {
-    width: 100%;
-    position: relative;
-    text-align: center;
-}
-
-
-/* Carousel Styling */
-
-.carousel div[class^=slide] {
-    height: 220px;
-    width: 100%;
-    top: 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: block;
-    z-index: -1
-}
-
-.slide1 {
+.myclass {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
     background-image: url('../assets/bk.jpeg');
+    margin: auto;
+    width: 100%;
+    padding: 60px;
 }
