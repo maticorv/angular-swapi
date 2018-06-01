@@ -1,8 +1,8 @@
 .myclass {
+    background-image: url('../assets/bk.jpeg');
     float: none;
     display: inline-block;
     vertical-align: middle;
-    background-image: url('../assets/bk.jpeg');
     margin: auto;
     width: 100%;
     padding: 60px;
