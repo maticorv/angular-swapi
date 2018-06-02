@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  serverBase: 'https://swapi.co/api',
+  baseHref: '/'
 };

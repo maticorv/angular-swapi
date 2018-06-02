@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
+import { RestBaseService } from '../tools/res.tools';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -11,23 +12,24 @@ const httpOptions = {
 };
 
 @Injectable()
-export class PeopleService {
+export class PeopleService extends RestBaseService {
+  private url = '/people';
 
-  peopleUrl = 'https://swapi.co/api/people/';
-
-  constructor( private http: HttpClient) { }
+  constructor( private http: HttpClient) {
+    super();
+   }
 
   /** GET people from the server */
   getPeople(): Observable<IPeople[]> {
-    return this.http.get(this.peopleUrl)
+    return this.http
+                .get(PeopleService.serverUrl + this.url)
                 .map(data => {
                   return data['results'] as IPeople[];
                 });
   }
   // GET person with the id reference
   getPerson(id: number): Observable<IPeople[]> {
-    const url = `${this.peopleUrl}/?id=${id}`;
-    return this.http.get(url)
+    return this.http.get(PeopleService.serverUrl + id)
                 .map(data => {
                   return data['results'] as IPeople[];
                 });
