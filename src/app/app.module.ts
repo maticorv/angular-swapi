@@ -13,7 +13,7 @@ import { SpeciesComponent } from './species/species.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './/app-routing.module';
-import { PeopleService } from './people.service';
+import { PeopleService } from './people/people.service';
 
 
 @NgModule({
