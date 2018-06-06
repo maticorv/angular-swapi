@@ -14,6 +14,8 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { PeopleService } from './people/people.service';
+import { FilmService } from './films/film.service';
+import { PersonDetailComponent } from './person-detail/person-detail.component';
 
 
 @NgModule({
@@ -25,7 +27,8 @@ import { PeopleService } from './people/people.service';
     SpaceshipsComponent,
     SpeciesComponent,
     VehiclesComponent,
-    DashboardComponent
+    DashboardComponent,
+    PersonDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,7 @@ import { PeopleService } from './people/people.service';
     HttpClientModule,
     HttpModule,
   ],
-  providers: [PeopleService],
+  providers: [PeopleService, FilmService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
