@@ -1,6 +1,6 @@
 <h2>Personajes</h2>
 <ul class="list-group">
-    <a href="#" class="list-group-item list-group-item-action" *ngFor="let c of people" routerLink="/detail/{{hero.id}}">
-        {{ c.name }} 
+    <a routerLink="/detail/{{i+1}}" class="list-group-item list-group-item-action" *ngFor="let c of people; let i = index">
+        {{ c.name }}
     </a>
 </ul>
