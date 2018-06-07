@@ -11,17 +11,26 @@ const httpOptions = {
 
 @Injectable()
 export class FilmService extends RestBaseService {
-  private url = 'films';
+  private url = '/films';
   constructor(private http: HttpClient) {
     super();
   }
-  /** GET people from the server */
+  /** GET films from the server */
   getFilms(): Promise<IFilm[]> {
     return this.http
-                .get(FilmService.serverUrl + '/' + this.url)
+                .get(FilmService.serverUrl + this.url)
                 .toPromise()
                 .then(response => {
                   return response['results'] as IFilm[];
+                });
+  }
+    // GET film with the id reference
+  getFilm(id: Number): Promise<IFilm[]> {
+    return this.http
+                .get(FilmService.serverUrl + this.url + '/' + id)
+                .toPromise()
+                .then(response => {
+                  return response as IFilm[];
                 });
   }
 }

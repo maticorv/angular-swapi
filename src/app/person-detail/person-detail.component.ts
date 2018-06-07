@@ -21,10 +21,10 @@ export class PersonDetailComponent implements OnInit {
   }
   getPerson(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.peopleService.getPerson(id)
-    .subscribe(data => {
+    this.peopleService
+      .getPerson(id)
+      .subscribe(data => {
       this.person = data;
-      console.log(data);
     });
   }
 

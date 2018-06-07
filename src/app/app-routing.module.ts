@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'vehicle', component: VehiclesComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'detail/:id', component: PersonDetailComponent },
-  { path: 'filmdetail', component: FilmDetailComponent },
+  { path: 'filmdetail/:id', component: FilmDetailComponent },
 ];
 
 @NgModule({
