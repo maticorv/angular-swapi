@@ -1,6 +1,6 @@
 <h3>Mejores personales</h3>
 <div class="grid grid-pad">
-    <a *ngFor="let c of people" class="col-1-4" routerlink="#">
+    <a *ngFor="let c of people; let i = index" class="col-1-4" routerLink="/detail/{{i+1}}">
         <div class="module hero">
             <h4>{{c.name}}</h4>
         </div>
