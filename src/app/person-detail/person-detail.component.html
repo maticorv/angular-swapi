@@ -1,5 +1,5 @@
 <div *ngIf="person">
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 30rem;">
         <div class="card-body">
             <h5 class="card-title"><b>Detalles de:</b> {{ person.name | uppercase }}</h5>
             <p class="card-text"><b>Peso:</b>{{person.height}}</p>
@@ -9,6 +9,7 @@
             <p class="card-text"><b>Color de ojos:</b> {{person.eye_color}}</p>
             <p class="card-text"><b>Cumpleaños:</b> {{person.birth_year}}</p>
             <p class="card-text"><b>Genero: </b>{{person.gender}}</p>
+            <a href="" class="card-text"><b>Peliculas en las que aparece: </b>{{person.films}}</a>
             <a href="#" class="btn btn-primary">Volver</a>
         </div>
     </div>

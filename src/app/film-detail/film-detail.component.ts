@@ -16,7 +16,6 @@ export class FilmDetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log('casa');
     this.getFilm();
   }
   getFilm(): void {

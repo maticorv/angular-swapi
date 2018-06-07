@@ -9,7 +9,10 @@ import { FilmService } from './film.service';
 export class FilmsComponent implements OnInit {
   films: any[];
 
-  constructor(private filmService: FilmService) { }
+  constructor(
+    private filmService: FilmService,
+    private peliculas: string[],
+  ) { }
 
   ngOnInit() {
     this.filmService
