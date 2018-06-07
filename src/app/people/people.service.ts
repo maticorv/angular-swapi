@@ -29,9 +29,9 @@ export class PeopleService extends RestBaseService {
   }
   // GET person with the id reference
   getPerson(id: number): Observable<IPeople[]> {
-    return this.http.get(PeopleService.serverUrl + id)
+    return this.http.get(PeopleService.serverUrl + this.url + '/' + id)
                 .map(data => {
-                  return data['results'] as IPeople[];
+                  return data as IPeople[];
                 });
   }
 }
