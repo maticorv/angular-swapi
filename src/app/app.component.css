@@ -5,6 +5,38 @@
 }
  */
 
+.overlay {
+    background: url(../assets/sw_logo.png) center center no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .overlay {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .overlay {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay {
+        width: 50%;
+        height: 50%;
+    }
+}
+
 .myclass {
     background-image: url('../assets/bk.jpeg');
     background-size: 100% auto !important;
