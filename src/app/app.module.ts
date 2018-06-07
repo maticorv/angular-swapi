@@ -16,6 +16,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { PeopleService } from './people/people.service';
 import { FilmService } from './films/film.service';
 import { PersonDetailComponent } from './person-detail/person-detail.component';
+import { FilmDetailComponent } from './film-detail/film-detail.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { PersonDetailComponent } from './person-detail/person-detail.component';
     SpeciesComponent,
     VehiclesComponent,
     DashboardComponent,
-    PersonDetailComponent
+    PersonDetailComponent,
+    FilmDetailComponent
   ],
   imports: [
     BrowserModule,

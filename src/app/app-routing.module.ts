@@ -9,6 +9,7 @@ import { SpeciesComponent } from './species/species.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PersonDetailComponent } from './person-detail/person-detail.component';
+import { FilmDetailComponent } from './film-detail/film-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'species', component: SpeciesComponent },
   { path: 'vehicle', component: VehiclesComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'detail/:id', component: PersonDetailComponent }
+  { path: 'detail/:id', component: PersonDetailComponent },
+  { path: 'filmdetail', component: FilmDetailComponent },
 ];
 
 @NgModule({
