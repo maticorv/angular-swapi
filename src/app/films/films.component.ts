@@ -11,7 +11,6 @@ export class FilmsComponent implements OnInit {
 
   constructor(
     private filmService: FilmService,
-    private peliculas: string[],
   ) { }
 
   ngOnInit() {
