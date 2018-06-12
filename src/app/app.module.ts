@@ -12,6 +12,7 @@ import { PlanetsService } from './planets/planets.service';
 import { SpeciesComponent } from './species/species.component';
 import { SpeciesService } from './species/species.service';
 import { VehiclesComponent } from './vehicles/vehicles.component';
+import { VehiclesService } from './vehicles/vehicles.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { PeopleService } from './people/people.service';
@@ -40,7 +41,7 @@ import { StarshipsService } from './starships/starships.service';
     HttpClientModule,
     HttpModule,
   ],
-  providers: [PeopleService, FilmService, PlanetsService, SpeciesService, StarshipsService, ],
+  providers: [PeopleService, FilmService, PlanetsService, SpeciesService, StarshipsService, VehiclesService, ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
