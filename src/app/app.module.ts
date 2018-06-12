@@ -19,7 +19,7 @@ import { FilmService } from './films/film.service';
 import { PersonDetailComponent } from './person-detail/person-detail.component';
 import { FilmDetailComponent } from './film-detail/film-detail.component';
 import { StarshipsComponent } from './starships/starships.component';
-
+import { StarshipsService } from './starships/starships.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +40,7 @@ import { StarshipsComponent } from './starships/starships.component';
     HttpClientModule,
     HttpModule,
   ],
-  providers: [PeopleService, FilmService, PlanetsService, SpeciesService, ],
+  providers: [PeopleService, FilmService, PlanetsService, SpeciesService, StarshipsService, ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
