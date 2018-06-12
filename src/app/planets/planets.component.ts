@@ -13,11 +13,9 @@ export class PlanetsComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    console.log('mati'),
     this.planetService
     .getPlanets()
     .then(data => {
-      console.log(data);
       this.planets = data;
     });
 

@@ -17,7 +17,6 @@ export class PlanetsService extends RestBaseService {
                 .get(PlanetsService.serverUrl + this.url)
                 .toPromise()
                 .then(response => {
-                  console.log(response);
                   return response['results'] as IPlanet[];
                 });
   }

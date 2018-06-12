@@ -1,3 +1,6 @@
-<p>
-  species works!
-</p>
+<h2>Especies</h2>
+<ul class="list-group">
+    <a class="list-group-item" *ngFor="let c of species, let i = index" class="list-group-item list-group-item-action">
+        {{ c.name }}
+    </a>
+</ul>
