@@ -1,3 +1,6 @@
-<p>
-  planets works!
-</p>
+<h2>Planetas</h2>
+<ul class="list-group">
+    <a class="list-group-item" *ngFor="let c of planets, let i = index" class="list-group-item list-group-item-action">
+        {{ c.name }}
+    </a>
+</ul>

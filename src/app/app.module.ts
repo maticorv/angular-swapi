@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { FilmsComponent } from './films/films.component';
 import { PeopleComponent } from './people/people.component';
 import { PlanetsComponent } from './planets/planets.component';
+import { PlanetsService } from './planets/planets.service';
 import { SpeciesComponent } from './species/species.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -38,7 +39,7 @@ import { StarshipsComponent } from './starships/starships.component';
     HttpClientModule,
     HttpModule,
   ],
-  providers: [PeopleService, FilmService],
+  providers: [PeopleService, FilmService, PlanetsService, ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
